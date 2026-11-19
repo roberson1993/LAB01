@@ -88,6 +88,7 @@ function renderGallery() {
     detailsButton.type = "button";
     detailsButton.textContent = "Plus de détails";
     profileActions.append(detailsButton);
+    detailsButton.addEventListener("click", () => persondata(person));
 
 
 
@@ -97,5 +98,7 @@ function renderGallery() {
 }
 
 
-const keypass = "adminpeople";
-localStorage.setItem(keypass, JSON.stringify(allPeople));
+function persondata(person) {
+  console.log(person);
+  alert(person.name);
+}
