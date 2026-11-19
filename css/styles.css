@@ -34,7 +34,9 @@ body {
 .page {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 28px 60px;
+  padding: 0 28px 2px;
+
+  
 }
 
 /* ── Top navigation ────────────────────────────── */
@@ -94,10 +96,11 @@ body {
 /* ── Hero section ──────────────────────────────── */
 .hero {
   margin-top: 56px;
-  margin-bottom: 48px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: 28px;
 }
 
@@ -142,6 +145,7 @@ h1 span {
   display: flex;
   align-items: center;
   width: min(520px, 100%);
+  margin: 0 auto;
   background: var(--surface);
   border: 1.5px solid var(--border);
   border-radius: var(--radius-pill);
@@ -221,8 +225,9 @@ h1 span {
 .profile-card {
   display: flex;
   align-items: center;
-  gap: 28px;
-  padding: 28px 32px;
+  gap: 20px;
+  padding: 24px 28px;
+  margin: 0 auto;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -230,6 +235,23 @@ h1 span {
   transition: box-shadow 0.25s, transform 0.25s;
   width: min(100%, 720px);
   max-width: 100%;
+
+}
+
+.profile-card[hidden] {
+  display: none;
+}
+
+#gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#gallery .profile-card {
+  width: min(100%, 720px);
 }
 
 .profile-card:hover {
@@ -314,7 +336,7 @@ h1 span {
 
 /* ── Responsive ────────────────────────────────── */
 @media (max-width: 640px) {
-  .page { padding: 0 16px 48px; }
+  .page { padding: 0 16px 1px; }
 
   .topbar { flex-direction: column; gap: 14px; align-items: flex-start; }
 
